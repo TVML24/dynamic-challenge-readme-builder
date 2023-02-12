@@ -41,7 +41,7 @@ function init() {
 {
     type: 'input',
     message: questions[3],
-    name: "Description",
+    name: "description",
 },
 {
     type: 'list',
@@ -86,7 +86,7 @@ function init() {
             usage,
             contributors
           };
-          generateMarkdown.renderLicenseBadge(licence);
+          generateMarkdown.renderLicenseBadge(response);
 });
 }
 // Function call to initialize app
