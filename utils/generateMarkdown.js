@@ -51,6 +51,11 @@ ${response.contributors}
 ## Licence
 
 ${response.licence}
+
+## Questions
+
+Get in tough with me at ${response.email}. You can find me on github at [TVML24](https://github.com/${response.username}).
+
 `;
 }
 
