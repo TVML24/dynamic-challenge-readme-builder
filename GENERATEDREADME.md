@@ -1,5 +1,5 @@
-# portfolio-showcase
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# dynamic-readme-generator
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
@@ -8,34 +8,29 @@ The motivation behind this project was to practice and clarify concepts and unde
 ## Table of Contents
 
 - [Description](#description)
-- [Usage](#usage)
-- [Credits](#credits)
+- [Installation](#installation)
+- [Usage and Testing](#usage)
+- [Constributing](#contributing)
 - [License](#license)
-
+- [Questions](#questions)
 
 ## Installation
 
 Use the command npm install to install the required dependencies in the integrated terminal prior to use.
 
-## Usage
+## Usage and Testing
 
-Upon entering the command node input.js into the integrated terminal the user will be prompted with several questions, the answers to which will be stored as the content for the readme that is to be generated.
-After every question is answered the script will dynamically generate a readme titled 'GENERATEDREADME.MD', which contains all of the necessary content.
-It will also include a badge displaying the licence at the top of the page. 
+Upon entering the command node input.js into the integrated terminal the user will be prompted with several questions, the answers to which will be stored as the content for the readme that is to be generated.    After every question is answered the script will dynamically generate a readme titled 'GENERATEDREADME.MD', which contains all of the necessary content.     It will also include a badge displaying the licence at the top of the page.
 
-Screenshot:
-![My Readme Generator](assets/screen.jpg)
+## Contributing 
 
-## Credits
+This project did include some starter code, but it has been modified heavily. Everything else is my own work. If you would like to contribute get in touch below!
 
-This project did include some starter code, but it has been modified heavily.
+## Licence
 
-This project makes use ofinquirer for the prompts and fs for the file-writing.
+MIT
 
-Everything else is my own work.
+## Questions
 
-Credit also to my teachers, as without them this would not have been possible.
+Get in tough with me at tvanmookletcher@gmail.com. You can find me on github at [TVML24](https://github.com/TVML24).
 
-## License
-
-Licensed under the MIT license.
