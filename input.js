@@ -17,9 +17,6 @@ const questions = ["What is your Github Username?",
 // names for prompts
 const names = ["username", "email", "project", "description", "licence", "installation", "instructions", "contributors"];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
 function init() {
  inquirer
@@ -66,28 +63,9 @@ function init() {
 },
 ])
     .then((response) => {
-        let username = response.username;
-        let email = response.email;
-        let project = response.project;
-        let description = response.description;
-        let licence = response.licence;
-        let installation = response.installation;
-        let instructions = response.instructions;
-        let usage = response.usage;
-        let contributors = response.contributors;
-        module.exports = {
-            username,
-            email,
-            project,
-            description,
-            licence,
-            installation,
-            instructions,
-            usage,
-            contributors
-          };
           generateMarkdown.renderLicenseBadge(response);
 });
 }
+
 // Function call to initialize app
 init();

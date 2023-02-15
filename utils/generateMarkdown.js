@@ -1,25 +1,31 @@
-const index = require('../index');
+const input = require('../input.js');
 const fs = require('fs');
+
+var texttoRender = "";
+var mitSelected = false;
+var apacheSelected = false;
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(response) {
-  var texttoRender = "";
+  var texttoRender = `# ${response.project}
+  `;
   if (response.licence === "MIT") {
-    texttoRender = `# ${response.project}  
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    texttoRender += "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else if (response.licence === "Apache") {
-    texttoRender = `# ${response.project}  
-    [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    texttoRender += "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"; 
   } else {
-    texttoRender = `# ${response.project}`;
+    texttoRender = `# ${response.project}
+    `;
   }
-  generateMarkdown(response, texttoRender);
+   const preparedExport = generateMarkdown(response, texttoRender);
+   console.log(preparedExport);
+   writetoFile(preparedExport);
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response, texttoRender) {
-  console.log (texttoRender + `
+  return texttoRender + `
 
 ## Description
 
@@ -28,7 +34,7 @@ ${response.description}
 ## Table of Contents
 
 - [Description](#description)
-- [Installation] (#installation)
+- [Installation](#installation)
 - [Usage and Testing](#usage)
 - [Constributing](#contributing)
 - [License](#license)
@@ -41,19 +47,26 @@ ${response.installation}
 
 ${response.instructions}
 
-##contributing 
+## Contributing 
 
 ${response.contributors}
 
 ## Licence
 
 ${response.licence}
-`)
+`;
 }
 
-var preparedExport = generateMarkdown;
+// TODO: Create a function to write README file
+function writetoFile(preparedExport) {
+  fs.writeFile('README.md', preparedExport, (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
+}
+
 module.exports = {
-  preparedExport,
   renderLicenseBadge,
-  generateMarkdown
+  generateMarkdown,
+  // writetoFile,
 };
+
