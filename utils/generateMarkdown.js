@@ -1,4 +1,4 @@
-const input = require('../input.js');
+const input = require('../index.js');
 const fs = require('fs');
 
 var texttoRender = "";
