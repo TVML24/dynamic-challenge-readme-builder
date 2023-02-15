@@ -14,7 +14,7 @@ const questions = ["What is your Github Username?",
                     "Are there any instructions on usage and testing for the project?", 
                     "Who contributed to the project and are there any instructions for would-be collaborators in the future?"];
 
-// names for prompts
+// names for prompts for my own reference
 const names = ["username", "email", "project", "description", "licence", "installation", "instructions", "contributors"];
 
 // TODO: Create a function to initialize app

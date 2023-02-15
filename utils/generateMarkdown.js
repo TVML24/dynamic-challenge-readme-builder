@@ -2,8 +2,6 @@ const input = require('../input.js');
 const fs = require('fs');
 
 var texttoRender = "";
-var mitSelected = false;
-var apacheSelected = false;
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -19,7 +17,6 @@ function renderLicenseBadge(response) {
     `;
   }
    const preparedExport = generateMarkdown(response, texttoRender);
-   console.log(preparedExport);
    writetoFile(preparedExport);
 }
 
@@ -59,7 +56,7 @@ ${response.licence}
 
 // TODO: Create a function to write README file
 function writetoFile(preparedExport) {
-  fs.writeFile('README.md', preparedExport, (err) =>
+  fs.writeFile('GENERATEDREADME.md', preparedExport, (err) =>
   err ? console.error(err) : console.log('Success!')
 );
 }
@@ -67,6 +64,5 @@ function writetoFile(preparedExport) {
 module.exports = {
   renderLicenseBadge,
   generateMarkdown,
-  // writetoFile,
 };
 
