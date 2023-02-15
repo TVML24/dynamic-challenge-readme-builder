@@ -35,6 +35,7 @@ ${response.description}
 - [Usage and Testing](#usage)
 - [Constributing](#contributing)
 - [License](#license)
+- [Questions](#questions)
 
 ## Installation
 
