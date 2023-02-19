@@ -1,4 +1,4 @@
-# portfolio-showcase
+# dynamic-challenge-readme-builder
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
